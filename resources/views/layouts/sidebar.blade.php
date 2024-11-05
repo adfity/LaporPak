@@ -1,0 +1,54 @@
+<button class="toggle-button" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+</button>
+
+<div class="sidebar" id="sidebar">
+    <h2>Masyarakat</h2>
+    @if (auth()->user()->role == 'Admin')
+        <a href="/kebakaran" class="{{ Request::is('kebakaran') ? 'active' : '' }}">
+            <i class="fas fa-fire"></i>Laporan Kebakaran
+        </a>
+        <a href="/medis" class="{{ Request::is('medis') ? 'active' : '' }}">
+            <i class="fas fa-medkit"></i>Laporan Medis
+        </a>
+        <a href="/pencurian" class="{{ Request::is('pencurian') ? 'active' : '' }}">
+            <i class="fas fa-user-secret"></i>Laporan Pencurian
+        </a>
+    @endif
+
+    @if (auth()->user()->role == 'User')
+        <a href="/kebakaranU" class="{{ Request::is('kebakaranU') ? 'active' : '' }}">
+            <i class="fas fa-fire"></i>Laporan Kebakaran
+        </a>
+        <a href="/medisU" class="{{ Request::is('medisU') ? 'active' : '' }}">
+            <i class="fas fa-medkit"></i>Laporan Medis
+        </a>
+        <a href="/pencurianU" class="{{ Request::is('pencurianU') ? 'active' : '' }}">
+            <i class="fas fa-user-secret"></i>Laporan Pencurian
+        </a>
+    @endif
+    
+    <a class="logout">
+        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+            @csrf
+            <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer; padding: 0;">
+                <i class="fas fa-sign-out-alt"></i> Keluar
+            </button>
+        </form>
+    </a>
+</div>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("collapsed");
+        document.getElementById("mainContent").classList.toggle("expanded");
+    }
+</script>
+
+<style>
+  /* Style untuk link yang aktif */
+    .sidebar a.active {
+        color: #ffcc00; /* Warna highlight */
+        font-weight: bold;
+    }
+</style>

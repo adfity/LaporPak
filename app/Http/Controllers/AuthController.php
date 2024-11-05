@@ -17,13 +17,19 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
+    
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home');
+            // Cek peran pengguna dan arahkan ke halaman yang sesuai
+            if (auth()->user()->role == 'User') {
+                return redirect()->route('kebakaran.indexU');
+            } elseif (auth()->user()->role == 'Admin') {
+                return redirect()->route('kebakaran.index');
+            }
         }
-
+    
         return back()->withErrors(['email' => 'Email atau password salah.']);
     }
+    
     
 
     public function showRegisterForm()

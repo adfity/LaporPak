@@ -1,10 +1,10 @@
-<!-- resources/views/medis/create.blade.php -->
+<!-- resources/views/pencurian/create.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Medis</title> 
+    <title>Laporan Pencurian</title> 
     @include('layouts.head')
 </head>
 <body>  
@@ -15,8 +15,8 @@
         @include('layouts.headbar')
             
             <div class="container">
-                <h2>Laporan Medis</h2>
-                <form action="{{ route('medis.store') }}" method="POST" enctype="multipart/form-data">
+                <h2>Laporan Pencurian</h2>
+                <form action="{{ route('pencurian.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         @if(auth()->user()->role == 'Admin')

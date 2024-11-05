@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Medis</title> 
+    <title>Laporan Kebakaran</title> 
     @include('layouts.head')
 </head>
 <body>  
@@ -15,8 +15,8 @@
         @include('layouts.headbar')
             
             <div class="container">
-                <h2>Laporan Medis</h2>
-                <form action="{{ route('medis.store') }}" method="POST" enctype="multipart/form-data">
+                <h2>Laporan Kebakaran</h2>
+                <form action="{{ route('kebakaran.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         @if(auth()->user()->role == 'Admin')
@@ -25,7 +25,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label for="telp">Nomor Telepon</label>
+                        <label for="telp"> Nomor Telpon</label>
                         <input type="tel" id="telp" name="telp" required>
                     </div>
                     <div class="form-group">

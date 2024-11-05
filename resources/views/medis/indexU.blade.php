@@ -32,7 +32,7 @@
         </div>
             <br>
         <!-- Display Table Title -->
-        <h3 class="mr-6 pb-2 text-gray-700 hover:text-black">Riwayat Laporan Medis</h3>
+        <h3 class="mr-6 pb-2 text-gray-700 hover:text-black">Riwayat Laporan Medis Anda</h3>
             <br>
         <!-- Table All -->
         <div id="all" class="overflow-x-auto">
@@ -47,7 +47,7 @@
                         <th class="px-4 py-2 text-left">Tanggal</th>
                         <th class="px-4 py-2 text-left">Perihal</th>
                         <th class="px-4 py-2 text-left">Progress</th>
-                        <th class="px-4 py-2 text-center">Action</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -73,15 +73,7 @@
                                     {{ $data->progress }}
                                 </span>
                             </td>
-                            <td class="px-4 py-2 text-center">
-                                <form action="{{ route('medis.update', $data->id) }}" method="POST" style="display: inline;" class="updateForm" data-id="{{ $data->id }}">
-                                    @csrf
-                                    @method('PUT')
-                                    <button type="button" onclick="confirmUpdate('{{ $data->progress }}', '{{ $data->id }}')" style="background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; padding: 5px 10px;">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                </form>
-                            </td>
+                            
                             
                         </tr>
                     @endforeach
@@ -102,7 +94,7 @@
                         <th class="px-4 py-2 text-left">Tanggal</th>
                         <th class="px-4 py-2 text-left">Perihal</th>
                         <th class="px-4 py-2 text-left">Progress</th>
-                        <th class="px-4 py-2 text-center">Action</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -128,15 +120,7 @@
                                     {{ $data->progress }}
                                 </span>
                             </td>
-                            <td class="px-4 py-2 text-center">
-                                <form action="{{ route('medis.update', $data->id) }}" method="POST" style="display: inline;" class="updateForm" data-id="{{ $data->id }}">
-                                    @csrf
-                                    @method('PUT')
-                                    <button type="button" onclick="confirmUpdate('{{ $data->progress }}', '{{ $data->id }}')" style="background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; padding: 5px 10px;">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                </form>
-                            </td>
+                            
                             
                         </tr>
                     @endforeach
@@ -157,7 +141,7 @@
                         <th class="px-4 py-2 text-left">Tanggal</th>
                         <th class="px-4 py-2 text-left">Perihal</th>
                         <th class="px-4 py-2 text-left">Progress</th>
-                        <th class="px-4 py-2 text-center">Action</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -183,15 +167,7 @@
                                     {{ $data->progress }}
                                 </span>
                             </td>
-                            <td class="px-4 py-2 text-center">
-                                <form action="{{ route('medis.update', $data->id) }}" method="POST" style="display: inline;" class="updateForm" data-id="{{ $data->id }}">
-                                    @csrf
-                                    @method('PUT')
-                                    <button type="button" onclick="confirmUpdate('{{ $data->progress }}', '{{ $data->id }}')" style="background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; padding: 5px 10px;">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                </form>
-                            </td>
+                            
                             
                         </tr>
                     @endforeach
@@ -212,7 +188,6 @@
                         <th class="px-4 py-2 text-left">Tanggal</th>
                         <th class="px-4 py-2 text-left">Perihal</th>
                         <th class="px-4 py-2 text-left">Progress</th>
-                        <th class="px-4 py-2 text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -237,15 +212,6 @@
                                     style="background-color: {{ $data->progress === 'Belum Dimulai' ? '#29cc97' : ($data->progress === 'Selesai' ? '#fec400' : ($data->progress === 'Berjalan' ? '#82cf5d' : '#cccccc')) }}">
                                     {{ $data->progress }}
                                 </span>
-                            </td>
-                            <td class="px-4 py-2 text-center">
-                                <form action="{{ route('medis.update', $data->id) }}" method="POST" style="display: inline;" class="updateForm" data-id="{{ $data->id }}">
-                                    @csrf
-                                    @method('PUT')
-                                    <button type="button" onclick="confirmUpdate('{{ $data->progress }}', '{{ $data->id }}')" style="background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; padding: 5px 10px;">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                </form>
                             </td>
                             
                         </tr>

@@ -13,6 +13,8 @@
 </body>
 </html>
 
+
+--Login Baru--
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -54,11 +56,26 @@
                     <i class="fas fa-lock absolute left-3 top-8 text-gray-400"></i>
                     <input type="password" id="password" name="password" required 
                         class="mt-1 h-8 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 pl-10">
+                    <i class="fas fa-eye absolute right-3 top-8 cursor-pointer" id="togglePassword"></i>
                 </div>
                 <a href="#" class="text-gray-500 text-sm hover:underline mt-2 block text-left">Lupa Password?</a>
             </div>
             <button type="submit" class="w-full bg-blue-900 text-white rounded-md py-2 hover:bg-blue-700 transition duration-200">Login</button>
         </form>
     </div>
+
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            this.classList.toggle('fa-eye-slash');
+            this.classList.toggle('fa-eye');
+        });
+    </script>
 </body>
 </html>
+

@@ -298,6 +298,26 @@
         .status-not-started {
             background-color: #29cc97;
         }
+
+        #confirmationModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #confirmationModal > div {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -473,6 +493,16 @@
         </div>
     </div>
 
+     <!-- Confirmation Modal -->
+    <div id="confirmationModal" style="display:none;">
+        <div>
+            <h3>Konfirmasi Perubahan</h3>
+            <p>Apakah laporan diterima dan selesai?</p>
+            <button id="confirmButton" style="background-color: #4CAF50; color: white; border: none; border-radius: 5px; padding: 5px 10px; margin: 5px;">Konfirmasi</button>
+            <button onclick="closeModal()" style="background-color: #f44336; color: white; border: none; border-radius: 5px; padding: 5px 10px; margin: 5px;">Batal</button>
+        </div>
+    </div>
+
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
@@ -517,11 +547,25 @@
             alert("Fungsi Tambah Laporan belum diimplementasikan.");
         }
 
-        function editReport() {
-            alert("Fungsi Edit Laporan belum diimplementasikan.");
+           function editLaporan() {
+            const modal = document.getElementById('confirmationModal');
+            modal.style.display = 'flex';
+
+            // Handle the confirm button action
+            document.getElementById('confirmButton').onclick = function() {
+                modal.style.display = 'none'; // Hide modal
+                alert("Laporan telah diterima dan selesai."); // Show confirmation alert
+                // Here you can also implement additional logic for editing the report
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('confirmationModal');
+            modal.style.display = 'none'; // Hide modal
         }
     </script>
 </body>
 
 </html>
+
 

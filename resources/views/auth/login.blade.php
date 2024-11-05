@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Poppins', sans-serif; /* Memastikan font Poppins digunakan */
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>

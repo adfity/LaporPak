@@ -62,6 +62,8 @@
             </div>
             <button type="submit" class="w-full bg-blue-900 text-white rounded-md py-2 hover:bg-blue-700 transition duration-200">Login</button>
         </form>
+
+        <p class="mt-4 text-center text-gray-600">Belum memiliki akun? <a href="register.php" class="text-blue-600 hover:underline">Daftar di sini</a>.</p>
     </div>
 
     <script>
@@ -78,4 +80,3 @@
     </script>
 </body>
 </html>
-

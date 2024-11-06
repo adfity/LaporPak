@@ -3,12 +3,10 @@
 </button>
 
 <div class="sidebar" id="sidebar">
-    <div class="bg-blue-800 p-2 rounded">
-        <img alt="Logo with colorful abstract shapes" class="h-8 w-8" height="40" src="https://storage.googleapis.com/a1aa/image/zj4seuBMZu3VQakX7q8LRSPUg7ZpimVbzDS3jHnnAvliJE3JA.jpg" width="40"/>
-        <span class="text-white text-lg font-bold">
-            LaporPak.com
-        </span>
-    </div>
+   <div class="logo">
+            <img src="./img/2.png" alt="logo">
+            <h1 class="logo-1">LaporPak.com</h1>
+        </div>
     
     @if (auth()->user()->role == 'Admin')
         <a href="/kebakaran" class="{{ Request::is('kebakaran') ? 'active' : '' }}">

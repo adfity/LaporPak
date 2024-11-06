@@ -56,3 +56,18 @@
         font-weight: bold;
     }
 </style>
+
+ .sidebar img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        
+        .sidebar .logo-1 {
+            float: left;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 50px;
+        }

@@ -21,6 +21,6 @@
 
 
 <div class="profile">
-    <img src="https://via.placeholder.com/40" alt="Profile Image">
+    <img src="{{ asset('img/5.png') }}" alt="Profile Image">
     <span>{{ $nama }}</span>
 </div>

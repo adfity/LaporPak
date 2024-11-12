@@ -16,7 +16,7 @@
 
     <div class="main-content" id="mainContent">
         @include('layouts.headbar')
-        <h1 class="text-2xl font-bold mb-4">Laporan Medis</h1>
+        <h1 class="text-2xl font-bold mb-4">Laporan Pencurian</h1>
 
         <!-- Tabs Section -->
         <div class="flex items-center ">
@@ -32,7 +32,7 @@
         </div>
             <br>
         <!-- Display Table Title -->
-        <h3 class="mr-6 pb-2 text-gray-700 hover:text-black">Riwayat Laporan Medis</h3>
+        <h3 class="mr-6 pb-2 text-gray-700 hover:text-black">Riwayat Laporan Pencurian</h3>
             <br>
         <!-- Table All -->
         <div id="all" class="overflow-x-auto">

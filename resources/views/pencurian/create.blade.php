@@ -23,6 +23,10 @@
                             <label for="nama">Nama Pelapor</label>
                             <input type="text" id="nama" name="nama" required>
                         @endif
+                        @if(auth()->user()->role == 'Admin')
+                            <label for="nama">Nama Pelapor</label>
+                            <input type="text" id="nama" name="nama" required>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label for="telp">Nomor Telepon</label>

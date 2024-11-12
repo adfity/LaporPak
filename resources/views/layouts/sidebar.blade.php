@@ -3,7 +3,12 @@
 </button>
 
 <div class="sidebar" id="sidebar">
-    <h2>Masyarakat</h2>
+    <br><br><br>
+        <a href="/home" >
+            <img  class="logo" src="{{ asset('img/2.png') }}" />
+            <span >LaporPak.com</span>
+        </a>
+    
     @if (auth()->user()->role == 'Admin')
         <a href="/kebakaran" class="{{ Request::is('kebakaran') ? 'active' : '' }}">
             <i class="fas fa-fire"></i>Laporan Kebakaran
@@ -31,7 +36,7 @@
     <a class="logout">
         <form action="{{ route('logout') }}" method="POST" style="display: inline;">
             @csrf
-            <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer; padding: 0;">
+            <button type="submit" style="border: none; ">
                 <i class="fas fa-sign-out-alt"></i> Keluar
             </button>
         </form>
@@ -51,4 +56,18 @@
         color: #ffcc00; /* Warna highlight */
         font-weight: bold;
     }
+    .logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-top: 70px; /* Tambahkan ini untuk menurunkan logo */
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
 </style>

@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif; /* Memastikan font Poppins digunakan */
@@ -38,6 +40,7 @@
             </div>
             <button type="submit" class="w-full bg-blue-900 text-white rounded-md py-2 hover:bg-blue-700 transition duration-200">Login</button>
         </form>
+        <p class="mt-4 text-center text-gray-600">Belum punya akun? <a href="{{ route('register') }}" class="text-blue-600 hover:underline">Daftar di sini</a>.</p>
     </div>
 </body>
 </html>

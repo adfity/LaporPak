@@ -3,7 +3,7 @@ name: LaporPak
 services:
   db:
     image: mysql:8.0
-    container_name: laravel10-lp
+    container_name: lapor_db
     restart: no
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
